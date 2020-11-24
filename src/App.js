@@ -29,6 +29,9 @@ class App extends React.Component {
 
     const baseUrl = "http://localhost:8000/books";
     const params = [];
+    if (this.state.search) {
+      params.push(`search=${this.state.search}`);
+    }
     if (this.state.sort) {
       params.push(`sort=${this.state.sort}`);
     }
